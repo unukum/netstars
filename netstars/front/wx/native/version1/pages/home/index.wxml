@@ -1,0 +1,22 @@
+<!-- BEM的规则   -->
+<!-- bem 更好的联系元素间的关系 -->
+<view class="app">
+  <view class="content">
+    <view class="logs">
+      <view bindtap="navDetail" class="log flex-row align-center space-between">
+        <view>
+          <view class="log-title">标题</view>
+          <view class="log-time">02/22 14:04</view>
+        </view>
+        <view class="log-menu">
+          删除
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="menu">
+      <view class="menu-create">新建</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="app">
+  <view>
+    <view class="title">
+      <input class="title-input" type="text" placeholder="标题"></input>
+    </view>
+    <view class="content">
+      <textarea class="content-textarea" name="" id="" cols="30" rows="10" placeholder="请填写内容"></textarea>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="menu">
+      <view class="menu-save">保存</view>
+    </view>
+  </view>
+</view>
