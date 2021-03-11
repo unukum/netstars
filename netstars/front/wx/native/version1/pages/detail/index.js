@@ -62,5 +62,24 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 保存记录
+   */
+  saveLog:function () {
+    let that = this;
+    let title = that.data.title;
+    let content = that.data.content;
+  //  使用wx提供的API进行网络请求
+    wx.request({
+      url:'http://localhost/index.php/log/savelog',
+      data:{
+        title,
+        content
+      },
+      success:function (res) {
+        console.log('res',res);
+      }
+    })
   }
 })
