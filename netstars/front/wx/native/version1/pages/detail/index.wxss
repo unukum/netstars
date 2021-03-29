@@ -1,19 +1,1 @@
 /* pages/detail/index.wxss */
-
-.menu {
-  position: fixed;
-  bottom: 20rpx;
-  width: 100%;
-}
-
-.menu-save {
-  margin: 0 auto;
-  font-weight: bold;
-  width: 250rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  border: 1rpx solid red;
-  border-radius: 10rpx;
-  /*4个角的值相等*/
-  text-align: center;
-}

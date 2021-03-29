@@ -1,4 +1,4 @@
-// pages/home/index.js
+// pages/create/index.js
 Page({
 
   /**
@@ -65,11 +65,44 @@ Page({
   },
 
   /**
-   * 进入详情页
+   * 设置标题
    */
-  navDetail: function () {
-    wx.navigateTo({
-      url: '/pages/detail/index',
+  fillTitle: function (e) {
+    let that = this;
+    that.setData({
+      title: e.detail.value,
+    })
+  },
+
+  /**
+   * 设置内容
+   */
+  fillContent: function (e) {
+    let that = this;
+    that.setData({
+      content: e.detail.value,
+    })
+  },
+
+  /**
+   * 保存数据
+   */
+  saveData: function () {
+    let that = this;
+    let content = that.data.content;
+    let title = that.data.title;
+    wx.request({
+      url: 'http://localhost/index.php/Records/saveData?tmp=1',
+      data: {
+        content,
+        title
+      },
+      success: function (res) {
+        console.log('res', res);
+      }
     })
   }
+
+
+
 })

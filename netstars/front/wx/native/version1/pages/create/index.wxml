@@ -1,0 +1,6 @@
+<!--pages/create/index.wxml-->
+<input type="text" placeholder="标题" class="title" bindinput="fillTitle"></input>
+<textarea class="content" placeholder="内容" bindinput="fillContent" name="" id="" cols="30" rows="10"></textarea>
+<view class="menu-save" bindtap="saveData">
+  保存
+</view>

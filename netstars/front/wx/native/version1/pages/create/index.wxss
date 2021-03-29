@@ -1,0 +1,14 @@
+/* pages/create/index.wxss */
+.menu-save {
+  width: 300rpx;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 38rpx;
+  font-weight: bold;
+  border: 1rpx solid yellow;
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+}

@@ -1,13 +1,18 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!-- 梦舞录 索引页 是程序的主入口  -->
+<view class="app">
+  <view class="content">
+    <!-- flex 让元素成为容器 -->
+    <view class="record flex space-between align-center" wx:for="{{records}}" bindtap="goDetail" data-id="{{item.id}}">
+      <view class="record-info ">
+        <view class="record-title">{{item.title}}</view>
+        <view class="record-time">{{item.content}}</view>
+      </view>
+      <view class="record-menu">
+        菜单
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="menu">
+    <view bindtap="navCreate" class="menu-create">新建</view>
   </view>
 </view>

@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title: '标题',
+    content: '内容'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this;
+    let id = options.id;
+    that.getDetail(id);
+    console.log('options', options);
   },
 
   /**
@@ -63,22 +67,20 @@ Page({
   onShareAppMessage: function () {
 
   },
+
   /**
-   * 保存记录
+   * 获取详情
    */
-  saveLog:function () {
+  getDetail: function (id) {
     let that = this;
-    let title = that.data.title;
-    let content = that.data.content;
-  //  使用wx提供的API进行网络请求
     wx.request({
-      url:'http://localhost/index.php/log/savelog',
-      data:{
-        title,
-        content
-      },
-      success:function (res) {
-        console.log('res',res);
+      url: 'http://localhost/index.php/Records/getDetail?id=' + id,
+      success: function (res) {
+        let detail = res.data.result;
+        that.setData({
+          title: detail.title,
+          content:detail.content
+        })
       }
     })
   }

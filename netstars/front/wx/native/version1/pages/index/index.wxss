@@ -1,21 +1,51 @@
 /**index.wxss**/
-.userinfo {
+/* flex布局 */
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
   align-items: center;
+
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.record {
+  width: 720rpx;
+  margin: auto;
+  margin-bottom: 24rpx;
+  border-bottom: 1rpx solid blue;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.record-title {
+  font-weight: bold;
+  font-size: 32rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.record-time {
+  color: gray;
+  font-size: 28rpx;
+  margin-bottom: 12rpx;
+}
+
+.record-menu {
+  color: red;
+  font-size: 24rpx;
+}
+
+.menu-create {
+  width: 300rpx;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 38rpx;
+  font-weight: bold;
+  border: 1rpx solid yellow;
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
 }

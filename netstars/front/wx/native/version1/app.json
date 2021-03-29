@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/home/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/create/index",
+    "pages/detail/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "梦舞",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
